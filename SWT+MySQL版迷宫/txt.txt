@@ -1,0 +1,16 @@
+#password:1548712503/20010423
+#User:root/suolk
+#DATABASE:maze_player
+
+net start maysql
+mysql -u root -p
+show database
+use maze_player
+show tables;
+alter user 'root'@'localhost' identified by '密码内容';
+
+CREATE USER '用户名'@'localhost' IDENTIFIED BY '密码';
+GRANT ALL PRIVILEGES ON 数据库名.* TO '用户名'@'localhost'
+FLUSH PRIVILEGES;
+
+net stop mysql
